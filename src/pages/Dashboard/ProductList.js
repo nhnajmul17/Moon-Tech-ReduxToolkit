@@ -1,17 +1,17 @@
 import React, { useEffect } from "react";
 import { useState } from "react";
+import { useSelector } from "react-redux";
 
 
 const ProductList = () => {
-  const [products, setProducts] = useState([]);
+  // const [products, setProducts] = useState([]);
+  const products = useSelector(state => state.products.products)
 
-
-  useEffect(() => {
-
-    fetch("products.json")
-      .then((res) => res.json())
-      .then((data) => setProducts(data));
-  });
+  // useEffect(() => {
+  //   fetch("products.json")
+  //     .then((res) => res.json())
+  //     .then((data) => setProducts(data));
+  // });
 
 
   return (
